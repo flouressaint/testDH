@@ -1,0 +1,246 @@
+{
+	"info": {
+		"_postman_id": "58442870-9356-4369-9081-aa2b4792ddb0",
+		"name": "testDH",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24947112"
+	},
+	"item": [
+		{
+			"name": "list of products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list of products page 2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/products?page=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"products"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list of products with price filters",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/products?page=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"products"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list of products with all filters",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/products?page=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"products"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list of products with some filters",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/products?page=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"products"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "product with reviews",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/products/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"products",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"New product\",\n    \"price\": 100,\n    \"description\": \"description of new product\",\n    \"in_stock\": false,\n    \"weight\": 5\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update product data",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"izm1\",\n    \"fokdfofdko\":\"fldkodfkd\",\n    \"price\": 120,\n    \"description\": \"HFIUHFIDJOIDJIifdjifdjidfjid ifjidfjijfd id\",\n    \"in_stock\": false,\n    \"weight\": 5\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/products/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/products/14",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"products",
+						"14"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create review",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customer\": \"Vyacheslav Kad\",\n    \"review\": \"2121ff\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/products/1/review",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"products",
+						"1",
+						"review"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
