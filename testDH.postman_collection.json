@@ -54,7 +54,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost/products?page=3",
+					"raw": "http://localhost/products?min_price=4000&max_price=7000",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -64,8 +64,12 @@
 					],
 					"query": [
 						{
-							"key": "page",
-							"value": "3"
+							"key": "min_price",
+							"value": "4000"
+						},
+						{
+							"key": "max_price",
+							"value": "7000"
 						}
 					]
 				}
@@ -78,7 +82,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost/products?page=3",
+					"raw": "http://localhost/products?min_price=7000&max_price=9000&min_weight=100&max_weight=600&in_stock=true",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -88,8 +92,24 @@
 					],
 					"query": [
 						{
-							"key": "page",
-							"value": "3"
+							"key": "min_price",
+							"value": "7000"
+						},
+						{
+							"key": "max_price",
+							"value": "9000"
+						},
+						{
+							"key": "min_weight",
+							"value": "100"
+						},
+						{
+							"key": "max_weight",
+							"value": "600"
+						},
+						{
+							"key": "in_stock",
+							"value": "true"
 						}
 					]
 				}
@@ -102,7 +122,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost/products?page=2",
+					"raw": "http://localhost/products?min_price=7000&min_weight=100&in_stock=false",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -112,8 +132,16 @@
 					],
 					"query": [
 						{
-							"key": "page",
-							"value": "2"
+							"key": "min_price",
+							"value": "7000"
+						},
+						{
+							"key": "min_weight",
+							"value": "100"
+						},
+						{
+							"key": "in_stock",
+							"value": "false"
 						}
 					]
 				}
@@ -126,14 +154,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost/products/4",
+					"raw": "http://localhost/products/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"path": [
 						"products",
-						"4"
+						"1"
 					]
 				}
 			},
@@ -173,7 +201,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"name\": \"izm1\",\n    \"fokdfofdko\":\"fldkodfkd\",\n    \"price\": 120,\n    \"description\": \"HFIUHFIDJOIDJIifdjifdjidfjid ifjidfjijfd id\",\n    \"in_stock\": false,\n    \"weight\": 5\n}",
+					"raw": "{\n    \"name\": \"Updated product\",\n    \"price\": 120,\n    \"description\": \"Updated description\",\n    \"in_stock\": false,\n    \"weight\": 5\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -220,7 +248,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"customer\": \"Vyacheslav Kad\",\n    \"review\": \"2121ff\"\n}",
+					"raw": "{\n    \"customer\": \"Customer Name\",\n    \"review\": \"Review about product\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
