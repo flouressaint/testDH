@@ -6,6 +6,8 @@ cd testDH/
 composer install
 cp -a .env.example .env
 ./vendor/bin/sail up -d
+```
+```
 ./vendor/bin/sail artisan migrate
 ./vendor/bin/sail artisan db:seed
 ```
